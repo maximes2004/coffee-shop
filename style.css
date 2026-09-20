@@ -299,6 +299,9 @@ button {
 .fovorite-coffee__container {
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .favorite-coffee__heading {
@@ -306,7 +309,6 @@ button {
 }
 
 .favorite-coffee__slider {
-  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -320,8 +322,10 @@ button {
 
 .favorite-coffee__arrow-rect {
   fill: transparent;
-  stroke: #665F55;
-  transition: fill 0.3s ease, stroke 0.3s ease;
+  stroke: #665f55;
+  transition:
+    fill 0.3s ease,
+    stroke 0.3s ease;
 }
 
 .favorite-coffee__arrow-path {
@@ -334,7 +338,7 @@ button {
 }
 
 [data-theme="dark"] .favorite-coffee__arrow-path {
-  stroke: #E1D4C9;
+  stroke: #e1d4c9;
 }
 
 .favorite-coffee__item-img {
@@ -360,3 +364,30 @@ button {
   font-size: var(--fs-h3);
   font-weight: 600;
 }
+
+.favorite-coffee__dots {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.favorite-coffee__dot {
+  width: 40px;
+  height: 4px;
+  background-color: #c1b6ad;
+  border-radius: 100px;
+}
+
+[data-theme="dark"] .favorite-coffee__dot {
+  background-color: #665f55;
+}
+
+.favorite-coffee__dot--active {
+  background-color: #665f55;
+}
+
+[data-theme="dark"] .favorite-coffee__dot--active {
+  background-color: #c1b6ad;
+}
+
+/*about section*/
