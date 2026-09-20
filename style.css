@@ -391,3 +391,44 @@ button {
 }
 
 /*about section*/
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-height: 1060px;
+}
+
+.about__image {
+  max-width: 660px;
+  border-radius: 20px;
+  background-size: calc(100% + 66px) auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about__image-1 {
+  background-image: url("img/about-1.jpg");
+  height: 590px;
+}
+
+.about__image-2 {
+  background-image: url("img/about-2.jpg");
+  height: 430px;
+}
+
+.about__image-3 {
+  background-image: url("img/about-3.jpg");
+  height: 430px;
+}
+
+.about__image-4 {
+  background-image: url("img/about-4.jpg");
+  height: 590px;
+}
