@@ -148,25 +148,33 @@
                 <h2 class="favorite-coffee__heading">Choose your <span class="accent-text-color">favorite</span> coffee
                 </h2>
                 <div class="favorite-coffee__slider">
-                    <svg class="favorite-coffee__arrow favorite-coffee__arrow--left" width="60" height="60"
-                        viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
-                        <path d="M36.5 30H24M30 36L24 30L30 24" stroke="#403F3D" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+                    <button class="favorite-coffee__arrow favorite-coffee__arrow--left" type="button"
+                        aria-label="To the left slide">
+                        <svg class="favorite-coffee__arrow-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect class="favorite-coffee__arrow-rect" x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
+                            <path class="favorite-coffee__arrow-path" d="M36.5 30H24M30 36L24 30L30 24" stroke="#403F3D" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
                     <div class="favorite-coffee__content">
-                        <img src="img/coffee-slider-1.png" alt="item-img">
-                        <h3 class="favorite-coffee__item-name">S’mores Frappuccino</h3>
-                        <p class="favorite-coffee__item-description">This new drink takes an espresso and mixes it with
-                            brown sugar and cinnamon before being topped with oat milk.</p>
-                        <p class="favorite-coffee__price">$5.50</p>
+                        <img class="favorite-coffee__item-img" src="img/coffee-slider-1.png" alt="item-img">
+                        <div class="favorite-coffee__item-info">
+                            <h3 class="favorite-coffee__item-name">S’mores Frappuccino</h3>
+                            <p class="favorite-coffee__item-description">This new drink takes an espresso and mixes it
+                                with
+                                brown sugar and cinnamon before being topped with oat milk.</p>
+                            <p class="favorite-coffee__price">$5.50</p>
+                        </div>
                     </div>
-                    <svg class="favorite-coffee__arrow favorite-coffee__arrow--right" width="60" height="60"
-                        viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
-                        <path d="M24 30H36.5M30.5 36L36.5 30L30.5 24" stroke="#403F3D" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+                    <button class="favorite-coffee__arrow favorite-coffee__arrow--right" type="button"
+                        aria-label="To the right slide">
+                        <svg class="favorite-coffee__arrow-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect class="favorite-coffee__arrow-rect" x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
+                            <path class="favorite-coffee__arrow-path" d="M24 30H36.5M30.5 36L36.5 30L30.5 24" stroke="#403F3D" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
                 </div>
                 <div class="favorite-coffee__points">
                     <span class="favorite-coffee__point"></span>
