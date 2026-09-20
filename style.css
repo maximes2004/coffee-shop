@@ -1,41 +1,83 @@
+/*CSS-переменные*/
+:root {
+  --font-main:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /*font-size*/
+  --fs-h1: 72px;
+  --fs-h2: 60px;
+  --fs-h3: 24px;
+  --fs-body-m: 16px;
+
+  --color-bg-primary: #e1d4c9;
+  --color-text-primary: #403f3d;
+
+  --header__logo-bg: #b0907a;
+  --header__logo-text: #403f3d;
+
+  /*цвета для луны в светлой теме (по умолчанию)*/
+  --color-moon-bg: transparent;
+  --color-moon-shape: #403f3d; /*темный силуэт луны*/
+}
+
+/* Тёмная тема */
+[data-theme="dark"] {
+  --color-bg-primary: #292826;
+  --color-text-primary: #e1d4c9;
+
+  --header__logo-text: #e1d4c9;
+
+  /*Цвета для луны в тёмной теме */
+  --color-moon-bg: #665f55; /*цвет круга*/
+  --color-moon-shape: #e1d4c9; /*цвет луны*/
+}
+
+/*Подключения локальных шрифтов*/
+
 /* Cyrillic - Italic */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-Cyrillic-italic.woff2') format('woff2');
+  src: url("/fonts/Inter-Cyrillic-italic.woff2") format("woff2");
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
 /* Cyrillic - Normal */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-Cyrillic-normal.woff2') format('woff2');
+  src: url("/fonts/Inter-Cyrillic-normal.woff2") format("woff2");
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
 /* Latin - Italic */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-Latin-italic.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("/fonts/Inter-Latin-italic.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
 /* Latin - Normal */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-Latin-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("/fonts/Inter-Latin-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
 /*Добавляем явное перечисление базовых тегов (0 баллов - *, 1 балл - теги)*/
@@ -63,9 +105,15 @@ html {
 }
 
 body {
-  font-family: "LocalGeorgia", "Georgia", serif;
-  font-size: 16px;
+  font-family: var(--font-main);
+  font-size: var(--fs-body-m);
   font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .container {
@@ -73,7 +121,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
-  background-color: #e1d4c9;
 }
 
 ul,
@@ -109,10 +156,24 @@ button {
   padding-bottom: 40px;
 }
 
+.header__logo-bg {
+  fill: var(--header__logo-bg);
+  transition: fill 0.3s ease;
+}
+
+.header__logo-text path {
+  fill: var(--header__logo-text);
+  transition: fill 0.3s ease;
+}
+
 .header__nav-list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+}
+
+.header__nav__item {
+  font-weight: 600;
 }
 
 .header__menu-n-color {
@@ -132,6 +193,25 @@ button {
   padding: 3px;
 }
 
+.header__moon-bg {
+  fill: var(--color-moon-bg);
+  transition: fill 0.3s ease;
+}
+
+.header__moon-icon {
+  fill: var(--color-moon-shape);
+  transition: fill 0.3s ease;
+}
+
+.header__theme-toggle {
+  display: block;
+}
+
+.header__menu-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
 .header__menu-btn {
   display: flex;
   justify-content: space-between;
@@ -141,14 +221,9 @@ button {
   padding-bottom: 4px;
 }
 
-.header__menu-btn::after {
-  content: "";
+.header__menu-cup {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("icons/coffee-cup.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   align-self: baseline;
 }
