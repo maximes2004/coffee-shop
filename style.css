@@ -227,7 +227,7 @@ button {
 
 .header__menu-wrapper {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
 }
 
 .header__menu-btn {
@@ -236,7 +236,17 @@ button {
   align-items: center;
   gap: 8px;
   height: 28px;
-  padding-bottom: 4px;
+  /*padding-bottom: 4px;*/
+}
+
+.header__menu-underline {
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.header__menu-btn:hover + .header__menu-underline {
+  background-color: var(--color-text-primary);
 }
 
 .header__menu-cup {
@@ -245,6 +255,8 @@ button {
   height: 20px;
   align-self: baseline;
 }
+
+
 
 /*hero section*/
 .hero__container {
