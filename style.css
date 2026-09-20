@@ -11,6 +11,8 @@
 
   --color-bg-primary: #e1d4c9;
   --color-text-primary: #403f3d;
+  --text-overlay-color: #e1d4c9; /*неменяющийся цвет*/
+  --text-accent-color: #b0907a; /*неменяющийся цвет accent*/
 
   --header__logo-bg: #b0907a;
   --header__logo-text: #403f3d;
@@ -147,6 +149,10 @@ button {
   cursor: pointer;
 }
 
+.accent-text-color {
+  color: var(--text-accent-color);
+}
+
 /*header*/
 .header__container {
   display: flex;
@@ -227,3 +233,54 @@ button {
   height: 20px;
   align-self: baseline;
 }
+
+/*hero section*/
+.hero__container {
+}
+
+.hero__content-wrapper {
+  background-image: url("/img/img-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+  max-width: 630px;
+  padding-left: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero__title {
+  font-size: var(--fs-h1);
+  line-height: 1.05;
+  color: var(--text-overlay-color);
+}
+
+.hero__title-enjoy {
+  color: var(--header__logo-bg);
+}
+
+.hero__description {
+  color: var(--text-accent-color);
+}
+
+.hero__btn {
+  color: var(--color-text-primary);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+  font-weight: 600;
+  line-height: 1.5;
+  background-color: var(--color-bg-primary);
+  padding: 20px 78px;
+  border-radius: 100px;
+}
+
+/*favorite-coffee section*/
