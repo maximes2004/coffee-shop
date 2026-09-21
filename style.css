@@ -328,7 +328,7 @@ button {
 }
 
 /*favorite-coffee section*/
-.fovorite-coffee__container {
+.favorite-coffee__container {
   padding-top: 100px;
   padding-bottom: 100px;
   display: flex;
@@ -582,13 +582,13 @@ button {
 }
 
 .footer__address::before {
-  content: url('icons/pin.png');
+  content: url("icons/pin.png");
 }
 
 .footer__tel::before {
-  content: url('icons/phone.png');
+  content: url("icons/phone.png");
 }
 
 .footer__schedule::before {
-  content: url('icons/clock.png');
+  content: url("icons/clock.png");
 }
