@@ -438,7 +438,7 @@ button {
 }
 
 [data-theme="dark"] .favorite-coffee__arrow-rect {
-  stroke: #E1D4C9;
+  stroke: #e1d4c9;
 }
 
 [data-theme="dark"] .favorite-coffee__arrow-path {
@@ -446,8 +446,8 @@ button {
 }
 
 [data-theme="dark"] .favorite-coffee__arrow:hover .favorite-coffee__arrow-rect {
-  fill: #403F3D;
-  stroke: #403F3D;
+  fill: #403f3d;
+  stroke: #403f3d;
 }
 
 .favorite-coffee__item-img {
@@ -860,6 +860,14 @@ button {
   border: 1px solid #c1b6ad;
   border-radius: 40px;
   transition: border-color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.menu__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] .menu__card {
