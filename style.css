@@ -654,6 +654,14 @@ button {
   stroke: #403F3D;
 }
 
+[data-theme="dark"] .social-icon:hover rect {
+  fill: #292826;
+}
+
+[data-theme="dark"] .social-icon:hover path {
+  stroke: #E1D4C9;
+}
+
 .footer__contacts {
   flex: 1;
   display: flex;
