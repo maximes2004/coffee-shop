@@ -305,7 +305,7 @@ button {
 /*hero section*/
 
 .hero__content-wrapper {
-  background-image: url("/img/img-hero.jpg");
+  background-image: url("img/img-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
