@@ -777,6 +777,14 @@ button {
     background-color 0.3s ease;
 }
 
+.menu__tab:hover {
+  background-color: #665f55;
+
+  & .menu__tab-btn {
+    color: #e1d4c9;
+  }
+}
+
 [data-theme="dark"] .menu__tab {
   border-color: #665f55;
 }
@@ -829,7 +837,7 @@ button {
   background-position: center;
   flex-shrink: 0; /* Чтобы иконка не сжималась, если кнопка во flex-контейнере */
   border-radius: 100px;
-  background-color: #665f55;
+  background-color: #c1b6ad;
   transition: background-color 0.3s ease;
 }
 
@@ -837,8 +845,20 @@ button {
   background-color: #e1d4c9;
 }
 
+[data-theme="dark"] .menu__tab-btn::before {
+  background-color: #665f55;
+}
+
 [data-theme="dark"] .menu__tab--active .menu__tab-btn::before {
   background-color: #292826;
+}
+
+[data-theme="dark"] .menu__tab:hover .menu__tab-btn::before {
+  background-color: #292826;
+}
+
+[data-theme="dark"] .menu__tab:hover {
+  background-color: #403f3d;
 }
 
 .menu__cards {
@@ -861,7 +881,9 @@ button {
   border-radius: 40px;
   transition: border-color 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   will-change: transform;
 }
 
