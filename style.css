@@ -490,7 +490,7 @@ button {
 }
 
 .mobile-app__btn {
-  border: 1px solid #665F55;
+  border: 1px solid #665f55;
   border-radius: 100px;
   padding: 12px 20px;
   display: flex;
@@ -526,4 +526,69 @@ button {
 
 [data-theme="dark"] .mobile-app__icon-path {
   fill: #e1d4c9;
+}
+
+/*footer*/
+.footer__wrapper {
+  background-color: #665f55;
+  padding: 100px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: var(--text-overlay-color);
+}
+
+.footer__slogan-n-social {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer__slogan {
+  font-size: var(--fs-h2);
+  line-height: 1.25;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__contacts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer__heading {
+  font-size: var(--fs-h3);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__contacts-item {
+  font-weight: 600;
+  display: flex;
+  gap: 8px;
+}
+
+.footer__address::before {
+  content: url('icons/pin.png');
+}
+
+.footer__tel::before {
+  content: url('icons/phone.png');
+}
+
+.footer__schedule::before {
+  content: url('icons/clock.png');
 }
