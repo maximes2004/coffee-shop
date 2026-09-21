@@ -321,17 +321,19 @@ button {
   font-weight: 600;
   line-height: 1.5;
   border-radius: 100px;
-  
+
   /* Фиксированная ширина кнопки */
   width: 200px;
   box-sizing: border-box;
-  padding: 20px 0; 
+  padding: 20px 0;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Иконка чашки */
@@ -342,14 +344,14 @@ button {
   height: 20px;
 
   /* Компенсация пространства остается для плавного сдвига текста */
-  margin-left: -28px; 
+  margin-left: -28px;
 
   /* Начальное легкое смещение иконки вправо всего на 8px */
   transform: translateX(8px);
 
-  transition: 
-    opacity 0.3s ease, 
-    visibility 0.3s ease, 
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
     margin-left 0.3s ease,
     transform 0.3s ease;
 
@@ -362,7 +364,7 @@ button {
   visibility: visible;
 
   /* Раскрываем отступ для текста */
-  margin-left: 8px; 
+  margin-left: 8px;
 
   /* Чашка мягко встает на свое место, проходя всего 8px */
   transform: translateX(0);
@@ -546,6 +548,20 @@ button {
   gap: 8px;
   align-items: center;
   width: 200px;
+  transition:
+    background-color 0.3s ease,
+    fill 0.3s ease;
+}
+
+.mobile-app__btn:hover {
+  background-color: #665f55;
+  .mobile-app__icon-path {
+    fill: #e1d4c9;
+  }
+  .mobile-app__available,
+  .mobile-app__label {
+    color: #e1d4c9;
+  }
 }
 
 .mobile-app__btn-text {
@@ -560,12 +576,14 @@ button {
   line-height: 1.4;
   font-weight: 600;
   text-align: left;
+  transition: color 0.3s ease;
 }
 
 .mobile-app__label {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .mobile-app__icon-path {
@@ -577,6 +595,14 @@ button {
   fill: #e1d4c9;
 }
 
+[data-theme="dark"] .mobile-app__btn:hover {
+  background-color: #403F3D;
+  .mobile-app__available,
+  .mobile-app__label {
+    color: #e1d4c9;
+  }
+}
+
 /*footer*/
 .footer__wrapper {
   background-color: #665f55;
@@ -586,6 +612,11 @@ button {
   align-items: center;
   gap: 100px;
   color: var(--text-overlay-color);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .footer__wrapper {
+  background-color: #403F3D;
 }
 
 .footer__slogan-n-social {
@@ -603,6 +634,24 @@ button {
 .footer__socials {
   display: flex;
   gap: 12px;
+}
+
+.social-icon rect {
+  fill: transparent; /* Обязательно указываем начальный цвет для срабатывания плавности */
+  transition: fill 0.3s ease;
+}
+
+.social-icon path {
+  stroke: #E1D4C9; /* Обязательно укажите начальный цвет */
+  transition: stroke 0.3s ease;
+}
+
+.social-icon:hover rect {
+  fill: #E1D4C9;
+}
+
+.social-icon:hover path {
+  stroke: #403F3D;
 }
 
 .footer__contacts {
@@ -730,7 +779,7 @@ button {
 }
 
 .menu__tab--active .menu__tab-btn::before {
-  background-color: #E1D4C9;
+  background-color: #e1d4c9;
 }
 
 [data-theme="dark"] .menu__tab--active .menu__tab-btn::before {
