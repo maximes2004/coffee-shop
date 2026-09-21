@@ -831,6 +831,13 @@ button {
   line-height: 1.25;
 }
 
+@media (max-width: 880px) {
+  .menu__heading {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .menu__tabs {
   display: flex;
   justify-content: center;
@@ -932,10 +939,11 @@ button {
 
 .menu__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, 310px);
   grid-auto-rows: auto;
   gap: 40px;
   width: 100%;
+  justify-content: center;
 }
 
 .menu__card-info {
@@ -972,6 +980,11 @@ button {
 .menu__card-heading {
   font-weight: 600;
   line-height: 1.25;
+  font-size: 24px;
+}
+
+.menu__card-heading {
+
 }
 
 .menu__card-description {
