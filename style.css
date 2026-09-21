@@ -317,14 +317,55 @@ button {
 
 .hero__btn {
   color: var(--color-text-primary);
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
+  background-color: var(--color-bg-primary);
   font-weight: 600;
   line-height: 1.5;
-  background-color: var(--color-bg-primary);
-  padding: 20px 78px;
   border-radius: 100px;
+  
+  /* Фиксированная ширина кнопки */
+  width: 200px;
+  box-sizing: border-box;
+  padding: 20px 0; 
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Иконка чашки */
+.hero__btn-cup {
+  opacity: 0;
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+
+  /* Компенсация пространства остается для плавного сдвига текста */
+  margin-left: -28px; 
+
+  /* Начальное легкое смещение иконки вправо всего на 8px */
+  transform: translateX(8px);
+
+  transition: 
+    opacity 0.3s ease, 
+    visibility 0.3s ease, 
+    margin-left 0.3s ease,
+    transform 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+/* При наведении */
+.hero__btn:hover .hero__btn-cup {
+  opacity: 1;
+  visibility: visible;
+
+  /* Раскрываем отступ для текста */
+  margin-left: 8px; 
+
+  /* Чашка мягко встает на свое место, проходя всего 8px */
+  transform: translateX(0);
 }
 
 /*favorite-coffee section*/
@@ -350,6 +391,14 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.favorite-coffee__arrow:hover .favorite-coffee__arrow-rect {
+  fill: #665f55;
+}
+
+.favorite-coffee__arrow:hover .favorite-coffee__arrow-path {
+  stroke: #e1d4c9;
 }
 
 .favorite-coffee__arrow-rect {
@@ -677,9 +726,14 @@ button {
   flex-shrink: 0; /* Чтобы иконка не сжималась, если кнопка во flex-контейнере */
   border-radius: 100px;
   background-color: #665f55;
+  transition: background-color 0.3s ease;
 }
 
 .menu__tab--active .menu__tab-btn::before {
+  background-color: #E1D4C9;
+}
+
+[data-theme="dark"] .menu__tab--active .menu__tab-btn::before {
   background-color: #292826;
 }
 
@@ -700,13 +754,13 @@ button {
 }
 
 .menu__card {
-  border: 1px solid #C1B6AD;
+  border: 1px solid #c1b6ad;
   border-radius: 40px;
   transition: border-color 0.3s ease;
 }
 
 [data-theme="dark"] .menu__card {
-  border-color: #665F55;
+  border-color: #665f55;
 }
 
 .menu__card-img {
@@ -726,5 +780,4 @@ button {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-
 }
