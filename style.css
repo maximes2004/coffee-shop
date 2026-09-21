@@ -964,6 +964,31 @@ button {
   will-change: transform;
 }
 
+.twisted-arrow {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .menu__card:nth-child(n + 5) {
+    display: none;
+  }
+  .menu__cards {
+    grid-template-columns: repeat(2, 310px);
+  }
+  .twisted-arrow {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+[data-theme="dark"] .twisted-arrow__rect {
+  stroke: #b0907a;
+}
+
+[data-theme="dark"] .twisted-arrow__path {
+  stroke: #E1D4C9;
+}
+
 .menu__card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -984,7 +1009,6 @@ button {
 }
 
 .menu__card-heading {
-
 }
 
 .menu__card-description {
