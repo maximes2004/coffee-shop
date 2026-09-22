@@ -1130,9 +1130,9 @@ button {
 .menu__card {
   border: 1px solid #c1b6ad;
   border-radius: 40px;
-  transition: border-color 0.3s ease;
   cursor: pointer;
   transition:
+    border-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
   will-change: transform;
