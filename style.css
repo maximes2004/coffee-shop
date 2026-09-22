@@ -57,7 +57,7 @@
 }
 
 /* Latin - Italic */
-@font-face {
+/*@font-face {
   font-family: "Inter";
   font-style: italic;
   font-weight: 100 900;
@@ -67,7 +67,7 @@
     U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
     U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
     U+2215, U+FEFF, U+FFFD;
-}
+}*/
 
 /* Latin - Normal */
 @font-face {
@@ -170,7 +170,7 @@ button {
 
 .accent-text-color {
   color: var(--text-accent-color);
-  font-style: italic;
+  font-style: oblique;
 }
 
 /*header*/
@@ -830,7 +830,9 @@ button {
 }
 
 .footer__slogan-n-social {
-  flex: 1;
+  flex-grow: 2; /* забирает в 2 раза больше свободного места */
+  flex-shrink: 1; /* сжимается медленнее */
+  flex-basis: 0%;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -839,6 +841,7 @@ button {
 .footer__slogan {
   font-size: var(--fs-h2);
   line-height: 1.25;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
@@ -887,7 +890,9 @@ button {
 }
 
 .footer__contacts {
-  flex: 1;
+  flex-grow: 1; /* растет с коэффициентом 1 */
+  flex-shrink: 2; /* сжимается в 2 раза сильнее первого при нехватке места */
+  flex-basis: 0%;
   display: flex;
   flex-direction: column;
   gap: 40px;
