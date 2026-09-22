@@ -923,12 +923,14 @@ button {
   content: url("icons/clock.png");
 }
 
-.footer__address-link {
+.footer__address-link,
+.footer__tel-link {
   position: relative;
 }
 
 /* Настройки подчеркивающей линии */
-.footer__address-link::after {
+.footer__address-link::after,
+.footer__tel-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -941,7 +943,8 @@ button {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .footer__address-link:hover::after {
+  .footer__address-link:hover::after,
+  .footer__tel-link:hover::after {
     opacity: 1;
   }
 }
