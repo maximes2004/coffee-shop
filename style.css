@@ -220,8 +220,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.header__nav-link:hover::after {
-  background-color: var(--color-text-primary);
+@media (hover: hover) and (pointer: fine) {
+  .header__nav-link:hover::after {
+    background-color: var(--color-text-primary);
+  }
 }
 
 .header__menu-n-color {
@@ -241,16 +243,20 @@ button {
   padding: 3px;
 }
 
-.header__theme-switch:hover .header__moon-bg {
-  fill: #665f55;
+@media (hover: hover) and (pointer: fine) {
+  .header__theme-switch:hover .header__moon-bg {
+    fill: #665f55;
+  }
 }
 
 .header__moon-icon {
   transition: fill 0.3s ease;
 }
 
-.header__theme-switch:hover .header__moon-icon {
-  fill: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  .header__theme-switch:hover .header__moon-icon {
+    fill: #e1d4c9;
+  }
 }
 
 .header__sun-bg {
@@ -261,8 +267,10 @@ button {
   fill: transparent;
 }
 
-[data-theme="dark"] .header__theme-switch:hover .header__sun-bg {
-  fill: #403f3d;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .header__theme-switch:hover .header__sun-bg {
+    fill: #403f3d;
+  }
 }
 
 .header__moon-bg {
@@ -299,8 +307,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.header__menu-btn:hover + .header__menu-underline {
-  background-color: var(--color-text-primary);
+@media (hover: hover) and (pointer: fine) {
+  .header__menu-btn:hover + .header__menu-underline {
+    background-color: var(--color-text-primary);
+  }
 }
 
 .header__menu-cup {
@@ -449,15 +459,17 @@ button {
 }
 
 /* При наведении */
-.hero__btn:hover .hero__btn-cup {
-  opacity: 1;
-  visibility: visible;
+@media (hover: hover) and (pointer: fine) {
+  .hero__btn:hover .hero__btn-cup {
+    opacity: 1;
+    visibility: visible;
 
-  /* Раскрываем отступ для текста */
-  margin-left: 8px;
+    /* Раскрываем отступ для текста */
+    margin-left: 8px;
 
-  /* Чашка мягко встает на свое место, проходя всего 8px */
-  transform: translateX(0);
+    /* Чашка мягко встает на свое место, проходя всего 8px */
+    transform: translateX(0);
+  }
 }
 
 /*favorite-coffee section*/
@@ -499,12 +511,16 @@ button {
   gap: 20px;
 }
 
-.favorite-coffee__arrow:hover .favorite-coffee__arrow-rect {
-  fill: #665f55;
+@media (hover: hover) and (pointer: fine) {
+  .favorite-coffee__arrow:hover .favorite-coffee__arrow-rect {
+    fill: #665f55;
+  }
 }
 
-.favorite-coffee__arrow:hover .favorite-coffee__arrow-path {
-  stroke: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  .favorite-coffee__arrow:hover .favorite-coffee__arrow-path {
+    stroke: #e1d4c9;
+  }
 }
 
 .favorite-coffee__arrow-rect {
@@ -527,9 +543,13 @@ button {
   stroke: #e1d4c9;
 }
 
-[data-theme="dark"] .favorite-coffee__arrow:hover .favorite-coffee__arrow-rect {
-  fill: #403f3d;
-  stroke: #403f3d;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"]
+    .favorite-coffee__arrow:hover
+    .favorite-coffee__arrow-rect {
+    fill: #403f3d;
+    stroke: #403f3d;
+  }
 }
 
 .favorite-coffee__item-img {
@@ -718,14 +738,16 @@ button {
     fill 0.3s ease;
 }
 
-.mobile-app__btn:hover {
-  background-color: #665f55;
-  .mobile-app__icon-path {
-    fill: #e1d4c9;
-  }
-  .mobile-app__available,
-  .mobile-app__label {
-    color: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  .mobile-app__btn:hover {
+    background-color: #665f55;
+    .mobile-app__icon-path {
+      fill: #e1d4c9;
+    }
+    .mobile-app__available,
+    .mobile-app__label {
+      color: #e1d4c9;
+    }
   }
 }
 
@@ -760,11 +782,13 @@ button {
   fill: #e1d4c9;
 }
 
-[data-theme="dark"] .mobile-app__btn:hover {
-  background-color: #403f3d;
-  .mobile-app__available,
-  .mobile-app__label {
-    color: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .mobile-app__btn:hover {
+    background-color: #403f3d;
+    .mobile-app__available,
+    .mobile-app__label {
+      color: #e1d4c9;
+    }
   }
 }
 
@@ -838,20 +862,28 @@ button {
   transition: stroke 0.3s ease;
 }
 
-.social-icon:hover rect {
-  fill: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  .social-icon:hover rect {
+    fill: #e1d4c9;
+  }
 }
 
-.social-icon:hover path {
-  stroke: #403f3d;
+@media (hover: hover) and (pointer: fine) {
+  .social-icon:hover path {
+    stroke: #403f3d;
+  }
 }
 
-[data-theme="dark"] .social-icon:hover rect {
-  fill: #292826;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .social-icon:hover rect {
+    fill: #292826;
+  }
 }
 
-[data-theme="dark"] .social-icon:hover path {
-  stroke: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .social-icon:hover path {
+    stroke: #e1d4c9;
+  }
 }
 
 .footer__contacts {
@@ -908,8 +940,10 @@ button {
   transition: opacity 0.3s ease;
 }
 
-.footer__address-link:hover::after {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .footer__address-link:hover::after {
+    opacity: 1;
+  }
 }
 
 /*menu page*/
@@ -964,11 +998,13 @@ button {
     background-color 0.3s ease;
 }
 
-.menu__tab:hover {
-  background-color: #665f55;
+@media (hover: hover) and (pointer: fine) {
+  .menu__tab:hover {
+    background-color: #665f55;
 
-  & .menu__tab-btn {
-    color: #e1d4c9;
+    & .menu__tab-btn {
+      color: #e1d4c9;
+    }
   }
 }
 
@@ -1040,12 +1076,16 @@ button {
   background-color: #292826;
 }
 
-[data-theme="dark"] .menu__tab:hover .menu__tab-btn::before {
-  background-color: #292826;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .menu__tab:hover .menu__tab-btn::before {
+    background-color: #292826;
+  }
 }
 
-[data-theme="dark"] .menu__tab:hover {
-  background-color: #403f3d;
+@media (hover: hover) and (pointer: fine) {
+  [data-theme="dark"] .menu__tab:hover {
+    background-color: #403f3d;
+  }
 }
 
 .menu__cards {
@@ -1106,9 +1146,11 @@ button {
   stroke: #e1d4c9;
 }
 
-.menu__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+@media (hover: hover) and (pointer: fine) {
+  .menu__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
 }
 
 [data-theme="dark"] .menu__card {
