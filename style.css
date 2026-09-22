@@ -311,6 +311,7 @@ button {
 }
 
 .burger-button {
+  position: relative;
   height: 44px;
   width: 44px;
   border-radius: 100px;
@@ -320,7 +321,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 8px;
   display: none;
 }
 
@@ -339,6 +340,15 @@ button {
   width: 16px;
   height: 0px;
   border: 1.5px solid #403f3d;
+  transition: transform 0.3s ease;
+}
+
+.burger-button:active .burger-button__top-dash {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.burger-button:active .burger-button__bottom-dash {
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 /*hero section*/
