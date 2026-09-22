@@ -533,6 +533,7 @@ button {
 }
 
 .favorite-coffee__item-img {
+  width: 100%;
   max-width: 480px;
   align-self: center;
 }
